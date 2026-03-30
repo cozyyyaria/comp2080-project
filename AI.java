@@ -57,18 +57,19 @@ public class AI {
                 // Only consider empty cells
                 if (game.isCellEmpty(row, col)) {
 
-                    // Try placing the AI's symbol here
-                     
+                    game.makeMove(row, col, aiSymbol);
 
                     // Evaluate this move with Minimax (human moves next → minimising)
                     int score = minimax(game, 0, false);
 
-                    // Undo the trial move
+                    game.undoMove(row, col);
                      
 
                     // Keep track of the best scoring position
                     if (score > bestScore) {
-                         
+                        bestScore = score;
+                        bestRow   = row;
+                        bestCol   = col;
                     }
                 }
             }
