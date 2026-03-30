@@ -93,17 +93,17 @@ public class AI {
 
         // AI has won this branch → return YOUR CODE HERE
         if (game.checkWin(aiSymbol)) {
-
+            return 10 - depth;   // earlier win = higher reward
         }
 
         // Human has won this branch → return YOUR CODE HERE
         if (game.checkWin(humanSymbol)) {
-
+            return depth - 10;   // earlier loss = lower (worse) penalty
         }
 
         // No moves remain and no winner → draw → return YOUR CODE HERE
         if (game.isBoardFull()) {
-
+            return 0;
         }
 
         // --- Recursive case ---
