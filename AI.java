@@ -37,7 +37,8 @@ public class AI {
     // Constructor: store which symbol belongs to whom
     // --------------------------------------------------------
     public AI(char aiSymbol, char humanSymbol) {
-        
+        this.aiSymbol    = aiSymbol;
+        this.humanSymbol = humanSymbol;
     }
 
     // --------------------------------------------------------
