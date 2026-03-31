@@ -6,8 +6,8 @@
 // Group Members:
 // First Name: Ariana  Last Name: Cruz        Student ID: 101346000
 // First Name: Ramtin  Last Name: Loghmani    Student ID: 101595929
-// First Name: Arman   Last Name: Milani      Student ID: 
-// First Name: Krishna Last Name: Venu        Student ID: 
+// First Name: Arman   Last Name: Milani      Student ID: 101555606
+// First Name: Krishna Last Name: Venu        Student ID: 101484996
 // ============================================================
 
 /**
@@ -63,8 +63,7 @@ public class AI {
                     int score = minimax(game, 0, false);
 
                     game.undoMove(row, col);
-                     
-
+                    
                     // Keep track of the best scoring position
                     if (score > bestScore) {
                         bestScore = score;
