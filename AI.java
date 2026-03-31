@@ -92,17 +92,17 @@ public class AI {
 
         // --- Base cases: check if the game has already ended ---
 
-        // AI has won this branch → return YOUR CODE HERE
+        // AI has won this branch
         if (game.checkWin(aiSymbol)) {
             return 10 - depth;   // earlier win = higher reward
         }
 
-        // Human has won this branch → return YOUR CODE HERE
+        // Human has won this branch
         if (game.checkWin(humanSymbol)) {
             return depth - 10;   // earlier loss = lower (worse) penalty
         }
 
-        // No moves remain and no winner → draw → return YOUR CODE HERE
+        // No moves remain and no winner → draw
         if (game.isBoardFull()) {
             return 0;
         }
@@ -116,7 +116,12 @@ public class AI {
             for (int row = 0; row < 3; row++) {
                 for (int col = 0; col < 3; col++) {
                     if (game.isCellEmpty(row, col)) {
-                          // TODO: (make move, recurse, undo, update best)
+                        game.makeMove(row, col, aiSymbol);
+                        int score = minimax(game, depth + 1, false);
+                        game.undoMove(row, col);
+                        if (score > best) {
+                            best = score;
+                        }
                     }
                 }
             }
@@ -129,7 +134,12 @@ public class AI {
             for (int row = 0; row < 3; row++) {
                 for (int col = 0; col < 3; col++) {
                     if (game.isCellEmpty(row, col)) {
-                          // TODO: (make move, recurse, undo, update best)
+                        game.makeMove(row, col, humanSymbol);
+                        int score = minimax(game, depth + 1, true);
+                        game.undoMove(row, col);
+                        if (score < best) {
+                            best = score;
+                        }
                     }
                 }
             }
