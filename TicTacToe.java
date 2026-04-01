@@ -4,8 +4,10 @@
 // TicTacToe Game with Minimax AI
 //
 // Group Members:
-// First Name: Ariana Last Name: Cruz Student ID: 101346000
-
+// First Name: Ariana  Last Name: Cruz        Student ID: 101346000
+// First Name: Ramtin  Last Name: Loghmani    Student ID: 101595929
+// First Name: Arman   Last Name: Milani      Student ID: 101555606
+// First Name: Krishna Last Name: Venu        Student ID: 101484996
 // ============================================================
 
 import java.util.Scanner;
@@ -19,9 +21,6 @@ public class TicTacToe {
 
     // The board: 3x3 grid of characters. '.' = empty cell.
     private char[][] board;
-
-    // Tracks whose turn it is (either 'X' or 'O')
-    private char currentPlayer;
 
     // Scanner shared across the whole game
     private Scanner scanner;
