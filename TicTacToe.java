@@ -22,9 +22,6 @@ public class TicTacToe {
     // The board: 3x3 grid of characters. '.' = empty cell.
     private char[][] board;
 
-    // Tracks whose turn it is (either 'X' or 'O')
-    private char currentPlayer;
-
     // Scanner shared across the whole game
     private Scanner scanner;
 
