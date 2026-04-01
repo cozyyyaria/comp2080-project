@@ -47,6 +47,10 @@ public class AI {
     // and returns the [row, col] of the highest-scoring move.
     // --------------------------------------------------------
     public int[] getBestMove(TicTacToe game) {
+        if (game.isBoardFull()) {
+            throw new IllegalStateException("getBestMove called on a full board");
+        }
+
         int bestScore = Integer.MIN_VALUE;
         int bestRow   = -1;
         int bestCol   = -1;
