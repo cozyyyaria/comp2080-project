@@ -50,15 +50,15 @@ public class TicTacToe {
     // --------------------------------------------------------
     public void displayBoard() {
         System.out.println();
-        System.out.println("    Col 1  Col 2  Col 3");
-        System.out.println("   +------+------+------+");
+        System.out.println("       Col 1  Col 2  Col 3");
+        System.out.println("      +------+------+------+");
         for (int row = 0; row < 3; row++) {
             System.out.print("Row " + (row + 1) + " |");
             for (int col = 0; col < 3; col++) {
                 System.out.print("  " + board[row][col] + "   |");
             }
             System.out.println();
-            System.out.println("   +------+------+------+");
+            System.out.println("      +------+------+------+");
         }
         System.out.println();
     }
